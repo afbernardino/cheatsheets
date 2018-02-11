@@ -62,8 +62,8 @@ Bare in mind that a Dockerfile should be easy to read and easy to understand, so
 try to reconcile both worlds.
 <br/>
 <h2>Second tip: The "< none > images"</h2>
-These called "< none > images" are actually layers and there are two types of
-`< none >` layers: The "good" ones and the "bad" ones.
+These called "`< none >` images" are actually layers and there are two types of
+"`< none >` layers": The "good" ones and the "bad" ones.
 <br/>
 <br/>
 Starting with the "good" ones, when we pull an image we pull all of its layers
