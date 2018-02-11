@@ -1,0 +1,29 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Cheat Sheets
+description: >
+  Save time with cheat sheets!
+baseurl: "/cheatsheets" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: none
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+  - scope:
+      path: "/assets/docker/img"
+    values:
+      image: true
