@@ -79,18 +79,18 @@ anything.
 We can get rid of them by running the following command:
 
 {% highlight shell %}
-docker rmi $(docker images --quiet --force=dangling=true)
+docker rmi $(docker images --quiet --filter=dangling=true)
 {% endhighlight %}
 
 If you do not want the error message when there are no dangling images you can
 run the following command (this will depend on your OS):
 
 {% highlight shell %}
-docker images --quiet --force=dangling=true | xargs --no-run-if-empty docker rmi
+docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi
 {% endhighlight %}
 
 Use the following to force:
 
 {% highlight shell %}
-docker images --quiet --force=dangling=true | xargs --no-run-if-empty docker rmi -f
+docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi -f
 {% endhighlight %}
