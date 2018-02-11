@@ -191,6 +191,31 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+/**
+ * Justify text.
+ */
+
+div {
+  text-align: justify;
+}
+
+/**
+ * Auto margin image.
+ */
+
+figure img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+ * Center figure caption.
+ */
+ 
+figure figcaption {
+    text-align: center;
+}
+
 /* Grouping content
    ========================================================================== */
 

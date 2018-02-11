@@ -49,19 +49,6 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
+        "normalize",
         "syntax-highlighting"
 ;
-
-// justify text
-* {
-  text-align: justify;
-}
-
-// figure settings
-figure img {
-    margin-left: auto;
-    margin-right: auto;
-}
-figure figcaption {
-    text-align: center;
-}

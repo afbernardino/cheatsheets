@@ -29,11 +29,11 @@ services:
 
 {% endhighlight %}
 2\. Run the following command:
-<br/>
-<br/>
-`docker-compose up -d`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker-compose up -d
+{% endhighlight %}
+
 Note that this will automatically build the image (if it does not already
 exist), unless we explicitly state that we do not want it with `--no-build`
 flag.
@@ -46,19 +46,19 @@ You can also build the image with `docker-compose build`.
 <br/>
 <br/>
 3\. See the container running:
-<br/>
-<br/>
-`docker ps`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker ps
+{% endhighlight %}
+
 4\. Access to `http://localhost:8080` and see the "Hello World!" message!
 <br/>
 <br/>
 5\. Stop the running container:
-<br/>
-<br/>
-`docker-compose down`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker-compose down
+{% endhighlight %}
+
 Note that this command will automatically stop and remove the container as well
 as remove the created network.

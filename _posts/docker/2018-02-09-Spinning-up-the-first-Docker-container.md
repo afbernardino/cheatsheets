@@ -34,17 +34,17 @@ you use.
 <br/>
 <h2>Build the image</h2>
 1\. Create a directory for your image:
-<br/>
-<br/>
-`mkdir <dir name>`
-<br/>
-<br/>
+
+{% highlight shell %}
+mkdir <directory name>
+{% endhighlight %}
+
 2\. Change path to your directory:
-<br/>
-<br/>
-`cd <dir name>`
-<br/>
-<br/>
+
+{% highlight shell %}
+cd <directory name>
+{% endhighlight %}
+
 3\. Create a file called "helloworld.py" with the following content:
 
 {% highlight python %}
@@ -73,6 +73,7 @@ def run(server_class=HTTPServer, handler_class=MyHandler):
 if __name__ == '__main__':
 	run()
 {% endhighlight %}
+
 This is a simple program written in Python that will display a page with "Hello
 World!" at the following address: 0.0.0.0:8000.
 <br/>
@@ -80,7 +81,8 @@ Note that this is a Python program but it could be anything!
 <br/>
 <br/>
 4\. Create a file called "Dockerfile" with the following content:
-{% highlight bash %}
+
+{% highlight shell %}
 # base image
 FROM python:rc-alpine
 
@@ -96,13 +98,13 @@ CMD [ "python", "./helloworld.py" ]
 # copy app to the image
 COPY ./helloworld.py /usr/src/app
 {% endhighlight %}
-<br/>
+
 5\. Build the image:
-<br/>
-<br/>
-`docker build -t <image name>:<tag> <context path>`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker build -t <image name>:<tag> <context path>
+{% endhighlight %}
+
 Where `<image name>` is the name you want for the new image, `<tag>` is the tag
 that you want to associate with the image (if you do not provide a tag it will
 be "latest") and `<context path>` the path where your files to be inserted in
@@ -115,17 +117,18 @@ execute the following commands.
 <br/>
 <br/>
 6\. Check the image was created:
-<br/>
-<br/>
-`docker images`
-<br/>
+
+{% highlight shell %}
+docker images
+{% endhighlight %}
+
 <h2>Spin up the container</h2>
 1\. Spin up the container:
-<br/>
-<br/>
-`docker run -d -p <host port>:8000 --name <container name> <image name>:<tag>`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker run -d -p <host port>:8000 --name <container name> <image name>:<tag>
+{% endhighlight %}
+
 Where `-d` stands for detached, which means your container will run in the
 background, `-p` the port mapping, being the left side of `:` the port of the
 host machine and the right side the port of the container (the one we exposed),
@@ -136,34 +139,34 @@ want to spin up your container.
 <br/>
 <br/>
 2\. See the container running:
-<br/>
-<br/>
-`docker ps`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker ps
+{% endhighlight %}
+
 3\. Access to `http://localhost:<host port>` (being `<host port>` the host port
 mapped to the container) and see the "Hello World!" message!
 <br/>
 <h2>The cleaning up process</h2>
 1\. Stop the container:
-<br/>
-<br/>
-`docker stop <container name>`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker stop <container name>
+{% endhighlight %}
+
 2\. Check if the container is no longer running:
-<br/>
-<br/>
-`docker ps -a`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker ps -a
+{% endhighlight %}
+
 3\. Remove the container:
-<br/>
-<br/>
-`docker rm <container name>`
-<br/>
-<br/>
+
+{% highlight shell %}
+docker rm <container name>
+{% endhighlight %}
+
 4\. Check if the container was removed:
-<br/>
-<br/>
-`docker ps -a`
+{% highlight shell %}
+docker ps -a
+{% endhighlight %}
