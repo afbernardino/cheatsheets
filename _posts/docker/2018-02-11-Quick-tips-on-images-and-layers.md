@@ -1,6 +1,5 @@
 ---
 title:  "Quick tips on images and layers"
-date:   2018-02-11 12:54:52 -0000
 categories: docker
 ---
 <h2>Introduction</h2>

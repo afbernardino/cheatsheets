@@ -1,6 +1,5 @@
 ---
 title:  "Spinning up the first Docker container"
-date:   2018-02-09 14:27:52 -0000
 categories: docker
 ---
 <h2>Introduction</h2>

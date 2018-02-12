@@ -1,6 +1,5 @@
 ---
 title:  "Spinning up a container with Docker Compose"
-date:   2018-02-10 10:54:52 -0000
 categories: docker
 ---
 <h2>Introduction</h2>
