@@ -1,6 +1,7 @@
 ---
 title:  "Spinning up the first Docker container"
-categories: docker
+categories: deploy
+tags: docker
 ---
 <h2>Introduction</h2>
 This is Cheat Sheets so I will just give a rather short introduction to Docker

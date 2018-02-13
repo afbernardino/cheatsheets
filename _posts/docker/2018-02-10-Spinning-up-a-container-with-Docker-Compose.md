@@ -1,6 +1,7 @@
 ---
 title:  "Spinning up a container with Docker Compose"
-categories: docker
+categories: deploy
+tags: docker
 ---
 <h2>Introduction</h2>
 Docker Compose is usually used to define and spin up multiple containers with

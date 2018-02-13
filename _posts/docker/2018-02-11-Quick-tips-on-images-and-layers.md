@@ -1,6 +1,7 @@
 ---
 title:  "Quick tips on images and layers"
-categories: docker
+categories: deploy
+tags: docker
 ---
 <h2>Introduction</h2>
 In [this post]({{site.baseurl}}{% post_url /docker/2018-02-09-Spinning-up-the-first-Docker-container %})

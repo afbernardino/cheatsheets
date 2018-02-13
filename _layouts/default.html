@@ -3,6 +3,10 @@
 
   {% include head.html %}
 
+  {% if site.tags != "" %}
+    {% include collecttags.html %}
+  {% endif %}
+
   <body>
 
     {% include header.html %}
