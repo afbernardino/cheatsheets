@@ -6,7 +6,7 @@ layout: default
   <ul>
     {% for post in site.tags[page.tag] %}
       <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-        {{ post.description }}
+        <div class="post-description">{{ post.description }}</div>
       </li>
     {% endfor %}
   </ul>

@@ -1,5 +1,6 @@
 ---
 title:  "Quick tips on images and layers"
+description: "Quick tips on how image layers work and how to manage them"
 categories: deploy
 tags: docker
 ---

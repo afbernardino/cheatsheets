@@ -1,5 +1,6 @@
 ---
 title:  "Spinning up the first Docker container"
+description: "Process to spin up a Docker container"
 categories: deploy
 tags: docker
 ---
