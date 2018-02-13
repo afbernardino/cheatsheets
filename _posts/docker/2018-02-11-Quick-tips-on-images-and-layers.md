@@ -16,9 +16,9 @@ Docker images work on a layered system. This means that all the single changes
 we make to an image will add an extra layer to the image.
 <figure>
     <img src="{{ site.baseurl }}/assets/docker/img/docker-layers.png" alt="Docker layers" width="600" height="400"/>
-    <figcaption>Fig 1. Docker layers</figcaption>
+    <figcaption>Figure 1. Docker layers</figcaption>
 </figure>
-This figure was actually taken from the official Docker documentation website.
+Figure 1 was actually taken from the official Docker documentation website.
 <br/>
 As we can see the image layers are only readable layers and we can only write
 to container layers.
