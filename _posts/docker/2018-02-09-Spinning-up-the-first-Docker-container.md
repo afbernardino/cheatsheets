@@ -1,30 +1,28 @@
 ---
 title:  "Spinning up the first Docker container"
-description: "Process to spin up a Docker container"
+description: "Process to spin up a Docker container."
 categories: deploy
 tags: docker
 ---
 <h2>Introduction</h2>
 This is Cheat Sheets so I will just give a rather short introduction to Docker
 containers.
-<br/>
-<br/>
+
 Containers allow us to deploy an application on any machine regardless its
 environment, which means they will run the same way on every host machine.
-<br/>
+
 They differ from virtual machines because they do not need to be shipped with
 an entire OS or hardware abstraction tools (that a virtual machine requires),
 which makes them very lightweight.
-<br/>
+
 Still they are also isolated from the surrounding environment, by making use of
 namespaces and cgroups, which are a part of the kernel, that determine what
 processes can see and how much they can use.
-<br/>
-<br/>
+
 In this post I will describe the difference between an image and a container
 as well as the process to build an image and spin up a container. I will also
 talk about the cleaning up process.
-<br/>
+
 <h2>Image and container</h2>
 To understand the following steps we need to understand the difference between
 an image and a container.
@@ -32,7 +30,7 @@ Think of an image as a box, where you just put your application (and its
 dependencies) inside, and the container as the running instance of what is
 inside that box. The box is what you ship and what is inside the box is what
 you use.
-<br/>
+
 <h2>Build the image</h2>
 1\. Create a directory for your image:
 
@@ -77,10 +75,9 @@ if __name__ == '__main__':
 
 This is a simple program written in Python that will display a page with "Hello
 World!" at the following address: 0.0.0.0:8000.
-<br/>
+
 Note that this is a Python program but it could be anything!
-<br/>
-<br/>
+
 4\. Create a file called "Dockerfile" with the following content:
 
 {% highlight shell %}
@@ -110,13 +107,11 @@ Where `<image name>` is the name you want for the new image, `<tag>` is the tag
 that you want to associate with the image (if you do not provide a tag it will
 be "latest") and `<context path>` the path where your files to be inserted in
 the image and Dockerfile are (in this case the path to your created directory).
-<br/>
-<br/>
+
 This will pull `python:rc-alpine` image from
 [Docker Hub](https://hub.docker.com/) registry to your local registry, and
 execute the following commands.
-<br/>
-<br/>
+
 6\. Check the image was created:
 
 {% highlight shell %}
@@ -137,8 +132,7 @@ host machine and the right side the port of the container (the one we exposed),
 `<image name>` the name of the image from which you want to spin up your
 container (the one we created) and `<tag>` the tag of the image from which you
 want to spin up your container.
-<br/>
-<br/>
+
 2\. See the container running:
 
 {% highlight shell %}
@@ -147,7 +141,7 @@ docker ps
 
 3\. Access to `http://localhost:<host port>` (being `<host port>` the host port
 mapped to the container) and see the "Hello World!" message!
-<br/>
+
 <h2>The cleaning up process</h2>
 1\. Stop the container:
 

@@ -1,6 +1,6 @@
 ---
 title:  "Quick tips on images and layers"
-description: "Quick tips on how image layers work and how to manage them"
+description: "How image layers work and how to manage them."
 categories: deploy
 tags: docker
 ---
@@ -8,11 +8,10 @@ tags: docker
 In [this post]({{site.baseurl}}{% post_url /docker/2018-02-09-Spinning-up-the-first-Docker-container %})
 I have described the difference between an image and a container, how to build
 an image and how to spin up a container.
-<br/>
-<br/>
+
 In this post I will focus on the images and briefly describe how the layered
 system used by Docker works and give some tips about it.
-<br/>
+
 <h2>How it works</h2>
 Docker images work on a layered system. This means that all the single changes
 we make to an image will add an extra layer to the image.
@@ -21,18 +20,18 @@ we make to an image will add an extra layer to the image.
     <figcaption>Figure 1. Docker layers</figcaption>
 </figure>
 Figure 1 was actually taken from the official Docker documentation website.
-<br/>
+
 As we can see the image layers are only readable layers and we can only write
 to container layers.
-<br/>
+
 It means that we can have multiple containers reading from the same image,
 without the need of copying the whole content of an image every time we run a
 container.
-<br/>
+
 To be able to achieve this Docker uses Copy-On-Write (COW) strategy, which means
 that a resource is copied to the container layer only when it is modified. This
 is very important for performance and memory space.
-<br/>
+
 <h2>First tip: Building the image</h2>
 Each step of the building process adds a new layers to the image, which means
 we should try to put the the most changing items at the bottom of our
@@ -58,25 +57,22 @@ COPY ./helloworld.py /usr/src/app
 As you can see the copy of "helloworld.py" takes place at the bottom of our
 Dockerfile, because it is the most changing item. This allows us to not recreate
 the same layer over and over again and therefore allows us faster build times.
-<br/>
+
 Bare in mind that a Dockerfile should be easy to read and easy to understand, so
 try to reconcile both worlds.
-<br/>
+
 <h2>Second tip: The "< none > images"</h2>
 These called "`< none >` images" are actually layers and there are two types of
 "`< none >` layers": The "good" ones and the "bad" ones.
-<br/>
-<br/>
+
 Starting with the "good" ones, when we pull an image we pull all of its layers
 and they are all linked to each other, Docker only gives a name to the last one.
 These are the ones we see when we run `docker images -a`.
-<br/>
-<br/>
+
 The "bad" ones (so called dangling images), are the ones left when we recreate
 an image, they are called dangling images because they are not linked to
 anything.
-<br/>
-<br/>
+
 We can get rid of them by running the following command:
 
 {% highlight shell %}
