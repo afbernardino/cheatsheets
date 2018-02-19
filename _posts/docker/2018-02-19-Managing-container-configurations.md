@@ -59,3 +59,5 @@ mutually exclusive.
 You can, for example, pull the configurations at start up time, using a 
 configuration management tool, and change them afterwards using environment 
 variables.
+
+You should use what best suits you.
