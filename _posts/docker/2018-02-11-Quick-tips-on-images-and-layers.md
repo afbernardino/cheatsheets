@@ -34,8 +34,8 @@ is very important for performance and memory space.
 
 <h2>First tip: Building the image</h2>
 Each step of the building process adds a new layers to the image, which means
-we should try to put the the most changing items at the bottom of our
-Dockerfile, like in this example:
+we can try to put the the most changing items at the bottom of our Dockerfile
+to get faster build times, like in this example:
 
 {% highlight bash %}
 # base image
@@ -70,8 +70,8 @@ and they are all linked to each other, Docker only gives a name to the last one.
 These are the ones we see when we run `docker images -a`.
 
 The "bad" ones (so called dangling images), are the ones left when we recreate
-an image, they are called dangling images because they are not linked to
-anything.
+an image (remember first tip). They are called dangling images because they are
+not linked to anything.
 
 We can get rid of them by running the following command:
 
