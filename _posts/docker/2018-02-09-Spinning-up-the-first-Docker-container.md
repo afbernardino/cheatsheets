@@ -87,14 +87,14 @@ FROM python:rc-alpine
 # set entry working directory
 WORKDIR /usr/src/app
 
+# copy app to the image
+COPY ./helloworld.py /usr/src/app
+
 # expose port to access the app
 EXPOSE 8000
 
 # command to run
 CMD [ "python", "./helloworld.py" ]
-
-# copy app to the image
-COPY ./helloworld.py /usr/src/app
 {% endhighlight %}
 
 5\. Build the image:
