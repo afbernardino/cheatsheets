@@ -35,11 +35,12 @@ docker-compose up -d
 {% endhighlight %}
 
 Note that this will automatically build the image (if it does not already
-exist), unless we explicitly state that we do not want it with `--no-build`
+exist), unless you explicitly state that you do not want it with `--no-build`
 flag.
 
-This will also create a network for the services to connect to, but we won't
-care about this for now, since we only have one instance running in this example.
+This will also create a network for the services to connect to, but you don't
+need to worry about this for now, since you only have one instance running in
+this example.
 
 You can also build the image with `docker-compose build`.
 

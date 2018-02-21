@@ -8,7 +8,7 @@ tags: docker
 This is Cheat Sheets so I will just give a rather short introduction to Docker
 containers.
 
-Containers allow us to deploy an application on any machine regardless its
+Containers allow you to deploy an application on any machine regardless its
 environment, which means they will run the same way on every host machine.
 
 They differ from virtual machines because they do not need to be shipped with
@@ -24,7 +24,7 @@ as well as the process to build an image and spin up a container. I will also
 talk about the cleaning up process.
 
 <h2>Image and container</h2>
-To understand the following steps we need to understand the difference between
+To understand the following steps you need to understand the difference between
 an image and a container.
 Think of an image as a box, where you just put your application (and its
 dependencies) inside, and the container as the running instance of what is
@@ -127,10 +127,10 @@ docker run -d -p <host port>:8000 --name <container name> <image name>:<tag>
 
 Where `-d` stands for detached, which means your container will run in the
 background, `-p` the port mapping, being the left side of `:` the port of the
-host machine and the right side the port of the container (the one we exposed),
+host machine and the right side the port of the container (the one you exposed),
 `<container name>` the name of the container that will be created,
 `<image name>` the name of the image from which you want to spin up your
-container (the one we created) and `<tag>` the tag of the image from which you
+container (the one you created) and `<tag>` the tag of the image from which you
 want to spin up your container.
 
 2\. See the container running:
