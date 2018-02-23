@@ -52,25 +52,25 @@ from http.server import BaseHTTPRequestHandler
 from http import HTTPStatus
 
 class MyHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(HTTPStatus.OK)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-        self.wfile.write(b'Hello World!')
-        return
+  def do_GET(self):
+    self.send_response(HTTPStatus.OK)
+    self.send_header('Content-type', 'text/html')
+    self.end_headers()
+    self.wfile.write(b'Hello World!')
+    return
 
 def run(server_class=HTTPServer, handler_class=MyHandler):
-    server_address = ('0.0.0.0', 8000)
-    httpd = server_class(server_address, handler_class)
-    try:
-        print("Server is up and running!")
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        print("Server will be stopped and connection closed!")
-        httpd.socket.close()
+  server_address = ('0.0.0.0', 8000)
+  httpd = server_class(server_address, handler_class)
+  try:
+    print("Server is up and running!")
+    httpd.serve_forever()
+  except KeyboardInterrupt:
+    print("Server will be stopped and connection closed!")
+    httpd.socket.close()
 
 if __name__ == '__main__':
-	run()
+  run()
 {% endhighlight %}
 
 This is a simple program written in Python that will display a page with "Hello
@@ -80,7 +80,7 @@ Note that this is a Python program but it could be anything!
 
 4\. Create a file called "Dockerfile" with the following content:
 
-{% highlight shell %}
+{% highlight dockerfile %}
 # base image
 FROM python:rc-alpine
 

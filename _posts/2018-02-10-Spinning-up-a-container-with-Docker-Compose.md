@@ -22,10 +22,10 @@ services:
     build:
       context: .    # context path
       dockerfile: Dockerfile    # Dockerfile name
-    image: hello-world:custom    # the image will be created with this name and tag
+    image: hello-world:custom   # the image will be created with this name and tag
     container_name: hello-world
     ports:
-    - "8080:8000"
+      - "8080:8000"
 
 {% endhighlight %}
 2\. Run the following command:

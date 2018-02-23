@@ -37,7 +37,7 @@ Each step of the building process adds a new layers to the image, which means
 you can try to put the the most changing items at the bottom of your Dockerfile
 to get faster build times, like in this example:
 
-{% highlight bash %}
+{% highlight dockerfile %}
 # base image
 FROM python:rc-alpine
 
