@@ -26,7 +26,7 @@ your logs.
 logs through graphs and more.
 
 As Figure 1 demonstrates, your containerized applications send their logs,
-through Fluentd's driver, to Fluentd server, where logs are routed and parsed,
+through Docker's driver, to Fluentd server, where logs are routed and parsed,
 and then Fluentd server sends the logs to Elasticsearch, where they are stored.
 
 After this your logs are ready to be visualized through Kibana.
