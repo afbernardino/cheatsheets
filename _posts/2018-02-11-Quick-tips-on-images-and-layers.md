@@ -16,7 +16,7 @@ system used by Docker works and give some tips about it.
 Docker images work on a layered system. This means that all the single changes
 you make to an image will add an extra layer to the image.
 <figure>
-    <img src="{{ site.baseurl }}/assets/docker/img/docker-layers.png" alt="Docker layers" width="600" height="400"/>
+    <img src="{{ site.baseurl }}/assets/img/docker-layers.png" alt="Docker layers" width="600" height="400"/>
     <figcaption>Figure 1. Docker layers</figcaption>
 </figure>
 Figure 1 was actually taken from the official Docker documentation website.
