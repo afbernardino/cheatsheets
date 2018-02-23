@@ -5,7 +5,7 @@ categories: deployment
 tags: docker
 ---
 <h2>Introduction</h2>
-In [this post]({{site.baseurl}}{% post_url /docker/2018-02-09-Spinning-up-the-first-Docker-container %})
+In [this post]({{site.baseurl}}{% post_url /2018-02-09-Spinning-up-the-first-Docker-container %})
 I have described the difference between an image and a container, how to build
 an image and how to spin up a container.
 

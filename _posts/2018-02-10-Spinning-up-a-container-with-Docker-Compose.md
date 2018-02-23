@@ -10,7 +10,7 @@ just one command, but it can also be used to spin a single instance.
 
 In this post I will describe how to build a docker-compose.yml and run a single
 container instance, using the example of
-[my previous post]({{ site.baseurl }}{% post_url /docker/2018-02-09-Spinning-up-the-first-Docker-container %}).
+[my previous post]({{ site.baseurl }}{% post_url /2018-02-09-Spinning-up-the-first-Docker-container %}).
 
 <h2>The process:</h2>
 1\. Create a file called "docker-compose.yml" with the following content:
