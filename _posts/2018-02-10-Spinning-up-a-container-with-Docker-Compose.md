@@ -1,7 +1,7 @@
 ---
 title:  "Spinning up a container with Docker Compose"
 description: "Process to spin up a container with Docker Compose."
-categories: deploy
+categories: deployment
 tags: docker
 ---
 <h2>Introduction</h2>

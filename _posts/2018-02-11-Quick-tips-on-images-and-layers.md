@@ -1,7 +1,7 @@
 ---
 title:  "Quick tips on images and layers"
 description: "How image layers work and how to manage them."
-categories: deploy
+categories: deployment
 tags: docker
 ---
 <h2>Introduction</h2>

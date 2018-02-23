@@ -1,7 +1,7 @@
 ---
 title:  "Managing container configurations"
 description: Some methods and tools to manage container configurations.
-categories: deploy
+categories: deployment
 tags: docker
 ---
 <h2>Introduction</h2>
