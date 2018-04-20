@@ -2,7 +2,7 @@
 title:  "Container logs (the EFK stack)"
 description: EFK stack for managing and storing container logs.
 categories: deployment
-tags: docker fluentd elasticsearch kibana
+tags: docker fluentd elasticsearch kibana devops
 ---
 <h2>Introduction</h2>
 Logs let you know what is going on with your application and there are several
@@ -30,5 +30,10 @@ and then Fluentd server sends the logs to Elasticsearch, where they are stored.
 
 After this your logs are ready to be visualized through Kibana.
 
-And that's it for the EFK stack! You can find a sample
-[here](https://github.com/afbernardino/efk-sample).
+To conclude I must say that the EFK stack can be considered a quite simple yet
+an effective way of managing and storing application logs, that can save tons
+of time when properly configured.
+
+I will leave you a sample
+[here](https://github.com/afbernardino/efk-sample), with instructions, that you
+can quickly setup and play with.

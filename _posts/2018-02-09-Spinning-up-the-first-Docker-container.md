@@ -2,7 +2,7 @@
 title:  "Spinning up the first Docker container"
 description: "Process to spin up a Docker container."
 categories: deployment
-tags: docker
+tags: docker devops
 ---
 <h2>Introduction</h2>
 This is Cheat Sheets so I will just give a rather short introduction to Docker

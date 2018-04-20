@@ -2,7 +2,7 @@
 title:  "Managing container configurations"
 description: Some methods and tools to manage container configurations.
 categories: deployment
-tags: docker
+tags: docker devops
 ---
 <h2>Introduction</h2>
 Configurations are an important part of an application and therefore they

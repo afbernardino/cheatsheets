@@ -2,7 +2,7 @@
 title:  "Quick tips on images and layers"
 description: "How image layers work and how to manage them."
 categories: deployment
-tags: docker
+tags: docker devops
 ---
 <h2>Introduction</h2>
 In [this post]({{site.baseurl}}{% post_url /2018-02-09-Spinning-up-the-first-Docker-container %})

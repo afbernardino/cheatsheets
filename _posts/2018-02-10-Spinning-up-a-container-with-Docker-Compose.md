@@ -2,7 +2,7 @@
 title:  "Spinning up a container with Docker Compose"
 description: "Process to spin up a container with Docker Compose."
 categories: deployment
-tags: docker
+tags: docker devops
 ---
 <h2>Introduction</h2>
 Docker Compose is usually used to define and spin up multiple containers with
